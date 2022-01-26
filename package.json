@@ -1,0 +1,20 @@
+{
+  "name": "PUPPETEER-exercises",
+  "version": "1.0.0",
+  "description": "This is a Puppeteer exercises project with Node.js (Express) used as backend framework. The project scrapes data from various websites by using different ways\r Author: Abdulhakim Altunkaya",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdulhakim-altunkaya/PUPPETEER-exercises.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdulhakim-altunkaya/PUPPETEER-exercises/issues"
+  },
+  "homepage": "https://github.com/abdulhakim-altunkaya/PUPPETEER-exercises#readme"
+}
