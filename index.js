@@ -27,8 +27,17 @@ const scrapeFunction3 = async () => {
         let browser = await puppeteer.launch();
         let page = await browser.newPage();
         await page.goto(currencyURL, {waitUntil: "networkidle2"});
-
+        const currencyData = await page.evaluate( async () => { 
+          const tds = Array.from(document.querySelectorAll('table tr td'))
+          return tds.map(td => td.innerText)
+        });
+        await browser.close();
+        const currencyArray = [currencyData[4], currencyData[24]];
+        const [USD, EUR] = currencyArray;
+        const currencyObject = JSON.stringify({ USD, EUR });
+        console.log(currencyObject);
+      } catch (e) {
+        console.log("error happened: "+e.message);
+      }
 };
-
-
-
+scrapeFunction3();
