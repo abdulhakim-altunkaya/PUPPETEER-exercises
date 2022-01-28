@@ -47,7 +47,8 @@ const scrapeFunction4 = async () => {
     let browser = await puppeteer.launch({headless: false});
     let page = await browser.newPage();
     await page.goto('https://jsitor.com/c0rM-YohL', {waitUntil: 'networkidle0'});
-
+    await page.click('.modal-footer > button:nth-child(2)');
+    await page.screenshot({ path: `./screenshots/${Math.floor(Math.random() * 11)}.png`})
     await browser.close();
 };
 scrapeFunction4();
