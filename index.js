@@ -10,7 +10,7 @@ const scrapeFunction = async () => {
 // scrapeFunction();
 
 
-const scrapeFunction2 = async () => {
+const scrapeFunction2 = async () => {e
     const browser = await puppeteer.launch({
         headless: false
     });
@@ -19,4 +19,16 @@ const scrapeFunction2 = async () => {
     await page.screenshot({ path: "./screenshots/bing.png"})
     await browser.close();
 };
-scrapeFunction2();
+// scrapeFunction2();
+
+const scrapeFunction3 = async () => {
+    try { /*Mistake 3: use catch with try. Dont use catch alone*/
+        let currencyURL= "https://www.tcmb.gov.tr/wps/wcm/connect/tr/tcmb+tr/main+page+site+area/bugun";
+        let browser = await puppeteer.launch();
+        let page = await browser.newPage();
+        await page.goto(currencyURL, {waitUntil: "networkidle2"});
+
+};
+
+
+
