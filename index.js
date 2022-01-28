@@ -40,4 +40,13 @@ const scrapeFunction3 = async () => {
         console.log("error happened: "+e.message);
       }
 };
-scrapeFunction3();
+//scrapeFunction3();
+
+const scrapeFunction4 = async () => {
+    let browser = await puppeteer.launch({headless: false});
+    let page = await browser.newPage();
+    await page.goto('https://jsitor.com/c0rM-YohL', {waitUntil: 'networkidle0'});
+
+    await browser.close();
+};
+scrapeFunction4();
